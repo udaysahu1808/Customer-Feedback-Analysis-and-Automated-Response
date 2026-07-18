@@ -1,4 +1,4 @@
-# Customer Feedback Analysis
+# Customer Feedback Analysis and Automated Response
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
