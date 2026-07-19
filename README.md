@@ -8,7 +8,7 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0)
 ![WordCloud](https://img.shields.io/badge/WordCloud-Text%20Visualization-8E44AD)
 ![Rule-Based NLP](https://img.shields.io/badge/Approach-Rule--Based%20%28No%20ML%29-orange)
-![Generative AI](https://img.shields.io/badge/Generative%20AI-Grok%20API-1C1C1C?logo=x&logoColor=white)
+![Generative AI](https://img.shields.io/badge/Generative%20AI-Grok%20API-000000?logo=x&logoColor=white)
 ![EDA](https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-6A1B9A)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
