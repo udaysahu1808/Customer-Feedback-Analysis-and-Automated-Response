@@ -12,7 +12,7 @@
 ![EDA](https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-6A1B9A)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-A transparent, rule based Python pipeline that transforms 10,000 unread restaurant reviews into a prioritized action list automatically flagging **critical (1–2 star) reviews**, extracting recurring **complaint themes**, and using a **Generative AI model** to draft ready-to-send apology emails for the most urgent cases.
+A transparent, rule based Python pipeline that transforms 10,000 unread restaurant reviews into a prioritized action list automatically flagging **critical (1–2 star) reviews**, extracting recurring **complaint themes**, and using a **Generative AI model** to draft ready to send apology emails for the most urgent cases.
 
 ---
 
@@ -39,9 +39,9 @@ A transparent, rule based Python pipeline that transforms 10,000 unread restaura
 
 ## Project Introduction
 
-Retail and hospitality businesses collect large volumes of customer reviews every week, but most of that feedback sits unread until someone manually sifts through it looking for the reviews that need urgent attention. This project builds a small, transparent Python pipeline that does that sifting automatically — flagging the most critical (low-rated) reviews, surfacing the recurring complaint themes behind them, and using a Generative AI model to draft ready-to-send apology emails for the worst cases.
+Retail and hospitality businesses collect large volumes of customer reviews every week, but most of that feedback sits unread until someone manually sifts through it looking for the reviews that need urgent attention. This project builds a small, transparent Python pipeline that does that sifting automatically flagging the most critical (low-rated) reviews, surfacing the recurring complaint themes behind them and using a Generative AI model to draft ready to send apology emails for the worst cases.
 
-By combining rule-based filtering, keyword-frequency analysis, and AI-assisted response generation into a single workflow, the project shows that a support team can go from "10,000 unread reviews" to "here are the ones that matter, here's why, and here's a draft response" in a few seconds — without training a single machine learning model.
+By combining rule-based filtering, keyword-frequency analysis and AI-assisted response generation into a single workflow, the project shows that a support team can go from "10,000 unread reviews" to "here are the ones that matter, here's why and here's a draft response" in a few seconds without training a single machine learning model.
 
 ---
 
@@ -49,11 +49,11 @@ By combining rule-based filtering, keyword-frequency analysis, and AI-assisted r
 
 A company receives thousands of customer reviews and support tickets every week. Currently, the support team manually reads through all of them to find the urgent, negative reviews and drafts individual apology emails by hand. This is:
 
-- **Slow** — doesn't scale as review volume grows.
-- **Inconsistent** — response quality depends on who's writing that day.
-- **Risky** — the backlog of unaddressed critical feedback grows, and genuinely urgent complaints risk getting lost in the noise or answered too late to matter.
+- **Slow** : Doesn't scale as review volume grows.
+- **Inconsistent** : Response quality depends on who's writing that day.
+- **Risky** : The backlog of unaddressed critical feedback grows, and genuinely urgent complaints risk getting lost in the noise or answered too late to matter.
 
-Therefore, there is a need for a lightweight, explainable system that can automatically isolate the most urgent feedback, explain *why* it's urgent, and accelerate the response process — without requiring a full ML/NLP pipeline.
+Therefore, there is a need for a lightweight, explainable system that can automatically isolate the most urgent feedback, explain *why* it's urgent and accelerate the response process — without requiring a full ML/NLP pipeline.
 
 ---
 
@@ -64,7 +64,7 @@ To develop a Python-based, rule-first customer feedback triage system that ident
 
 **Specific Objectives:**
 - To load and clean a raw customer review dataset (text reviews + star ratings).
-- To use simple, transparent rule-based logic — **no machine learning** — to isolate "critical" (1–2 star) reviews.
+- To use simple, transparent rule-based logic — **no machine learning** to isolate "critical" (1–2 star) reviews.
 - To identify the most common complaint keywords within critical reviews using frequency analysis.
 - To group complaint keywords into named, business-relevant categories (Service, Food Quality, Pricing, Delivery, Ambience, Hygiene).
 - To use a Generative AI API to automatically draft short, personalized, empathetic apology emails for the most critical, most detailed negative reviews.
@@ -81,10 +81,10 @@ To develop a Python-based, rule-first customer feedback triage system that ident
 - Documenting the approach, limitations, and run instructions.
 
 **Out of scope:**
-- Any machine learning or NLP modeling (e.g., sentiment classifiers, topic modeling) — the brief explicitly calls for rule-based logic instead.
+- Any machine learning or NLP modeling (e.g., sentiment classifiers, topic modeling) the brief explicitly calls for rule-based logic instead.
 - Automatically sending emails (the notebook only drafts them; sending would require integrating an email/SMTP or ticketing system).
 - Handling non-English reviews, multi-language support, or negation-aware/semantic keyword extraction (noted as a limitation, not solved here).
-- Production concerns like scaling to real-time review streams, deduplication across platforms, or a persistent database — this is a single-run analysis notebook, not a deployed service.
+- Production concerns like scaling to real-time review streams, deduplication across platforms or a persistent database — this is a single-run analysis notebook, not a deployed service.
 
 ---
 
@@ -92,10 +92,10 @@ To develop a Python-based, rule-first customer feedback triage system that ident
 
 This project shows that critical customer feedback can be triaged and responded to faster and more consistently, without needing machine learning or heavy infrastructure. It is beneficial for:
 
-- **Support teams** — reduces manual workload and standardizes response quality.
-- **Management** — provides a quick, quantified read on recurring problem areas (e.g., service, food quality).
-- **Customers** — faster, more consistent acknowledgment improves retention of unhappy customers.
-- **Analysts & students** — a simple, auditable template for feedback triage that's easy to extend to other review or ticket sources.
+- **Support teams** : Reduces manual workload and standardizes response quality.
+- **Management** : Provides a quick, quantified read on recurring problem areas (e.g., service, food quality).
+- **Customers** : Faster, more consistent acknowledgment improves retention of unhappy customers.
+- **Analysts & students** : A simple, auditable template for feedback triage that's easy to extend to other review or ticket sources.
 
 ---
 
@@ -179,42 +179,36 @@ Select the top 3 critical reviews — ranked by number of matched complaint segm
 
 Generated emails are printed alongside their source reviews, then exported to `AI_Generated_Emails.txt`; the filtered critical reviews and complaint category summary are exported to `Critical_Restaurant_Reviews.csv` and `Complaint_Category_Summary.csv`.
 
----
+## Phase 9: Key Insights
 
-## Key Insights
-
-1. **A significant proportion of feedback requires attention** — ~24.4% of all reviews are 1–2 star (roughly 1 in 4 customers), making manual review impractical at scale.
-2. **Service quality is the biggest driver of dissatisfaction** — frequent terms like *service, staff, worst, rude* point to employee behavior, responsiveness, and wait time as the top pain points.
-3. **Food consistency is a recurring operational challenge** — keywords like *taste, quality, chicken, biryani, rice* suggest inconsistent food quality on popular menu items.
+1. **A significant proportion of feedback requires attention** : ~24.4% of all reviews are 1–2 star (roughly 1 in 4 customers), making manual review impractical at scale.
+2. **Service quality is the biggest driver of dissatisfaction** : Frequent terms like *service, staff, worst, rude* point to employee behavior, responsiveness, and wait time as the top pain points.
+3. **Food consistency is a recurring operational challenge** :  Keywords like *taste, quality, chicken, biryani, rice* suggest inconsistent food quality on popular menu items.
 4. **Complaints concentrate around a few recurring themes** rather than being random, so targeted fixes can address a large share of dissatisfaction.
-5. **Manual review doesn't scale** — with 10,000 reviews, automated filtering and keyword extraction enable much faster prioritization than manual reading.
+5. **Manual review doesn't scale** : With 10,000 reviews, automated filtering and keyword extraction enable much faster prioritization than manual reading.
 
----
+## Phase 10: Strategic Recommendations
 
-## Strategic Recommendations
+1. **Prioritize service-quality training** : Invest in front-of-house training to reduce wait times and improve staff courtesy and attentiveness.
+2. **Audit kitchen consistency** : Standardize preparation for high-complaint dishes (biryani, chicken, rice) and run regular quality checks.
+3. **Operationalize the review analysis pipeline** : Run it weekly/monthly and track complaint-category trends over time via a KPI dashboard.
+4. **Use AI-generated responses for faster support** : Auto draft empathetic replies for every critical review; agents review and personalize before sending.
+5. **Extend analysis to restaurant/branch level** : Run keyword and category analysis per location to identify and target underperforming branches.
 
-1. **Prioritize service-quality training** — invest in front-of-house training to reduce wait times and improve staff courtesy and attentiveness.
-2. **Audit kitchen consistency** — standardize preparation for high-complaint dishes (biryani, chicken, rice) and run regular quality checks.
-3. **Operationalize the review analysis pipeline** — run it weekly/monthly and track complaint-category trends over time via a KPI dashboard.
-4. **Use AI-generated responses for faster support** — auto-draft empathetic replies for every critical review; agents review and personalize before sending.
-5. **Extend analysis to restaurant/branch level** — run keyword and category analysis per location to identify and target underperforming branches.
-
----
-
-## Phase 9–11: Executive Summary, Future Scope & Conclusion
+## Phase 11: Executive Summary, Future Scope & Conclusion
 
 ### Executive Summary
-Managing thousands of customer reviews manually is inefficient and hard to scale. This project presents a Python-based automated review analysis pipeline that filters critical (1–2 star) reviews with rule-based logic, performs keyword frequency analysis to uncover complaint themes, and leverages Generative AI to draft personalized apology emails for high-priority cases — all without traditional machine learning. Across 10,000 restaurant reviews, ~24% were critical, with service quality and food/order quality emerging as the primary drivers of dissatisfaction. The result is a fast, transparent, cost-effective feedback management system that reduces manual effort, accelerates response times, and gives management continuous visibility into recurring operational issues.
+Managing thousands of customer reviews manually is inefficient and hard to scale. This project presents a Python-based automated review analysis pipeline that filters critical (1–2 star) reviews with rule-based logic, performs keyword frequency analysis to uncover complaint themes, and leverages Generative AI to draft personalized apology emails for high-priority cases — all without traditional machine learning. Across 10,000 restaurant reviews, ~24% were critical, with service quality and food/order quality emerging as the primary drivers of dissatisfaction. The result is a fast, transparent, cost-effective feedback management system that reduces manual effort, accelerates response times and gives management continuous visibility into recurring operational issues.
 
 ### 💡 Future Scope
 1. **Improve keyword extraction with negation handling** (e.g., correctly interpreting "not good," "not fresh").
 2. **Incorporate lightweight sentiment analysis** or topic modeling as an optional enhancement.
 3. **Develop a real-time monitoring dashboard** tracking critical-review rate and complaint trends per restaurant/branch.
 4. **Integrate with customer support systems** so AI-generated drafts can be reviewed, approved, and sent within one workflow.
-5. **Expand to multiple feedback channels** — app store reviews, support tickets, surveys, social media — using the same filter → insight → AI-response workflow.
+5. **Expand to multiple feedback channels** : App store reviews, support tickets, surveys, social media — using the same filter → insight → AI-response workflow.
 
 ### 📌 Conclusion
-This project demonstrates that a simple, explainable, rule-based approach — combined with Generative AI only at the final response-generation stage — can significantly reduce the manual effort required for customer feedback analysis and response management. It avoids the complexity of an ML training pipeline while remaining transparent, easy to implement, and auditable, offering a reusable template for organizations looking to improve customer experience, accelerate response times, and enhance retention through data-driven feedback management.
+This project demonstrates that a simple, explainable, rule-based approach combined with Generative AI only at the final response-generation stage can significantly reduce the manual effort required for customer feedback analysis and response management. It avoids the complexity of an ML training pipeline while remaining transparent, easy to implement and auditable, offering a reusable template for organizations looking to improve customer experience, accelerate response times and enhance retention through data-driven feedback management.
 
 ---
 
