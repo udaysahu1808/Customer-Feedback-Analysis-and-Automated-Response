@@ -12,7 +12,7 @@
 ![EDA](https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-6A1B9A)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-A transparent, rule based Python pipeline that transforms 10,000 unread restaurant reviews into a prioritized action list automatically flagging **critical (1–2 star) reviews**, extracting recurring **complaint themes**, and using a **Generative AI model** to draft ready to send apology emails for the most urgent cases.
+A transparent, rule based Python pipeline that transforms 10,000 unread restaurant reviews into a prioritized action list automatically flagging **critical (1–2 star) reviews**, extracting recurring **complaint themes** and using a **Generative AI model** to draft ready to send apology emails for the most urgent cases.
 
 ---
 
@@ -53,22 +53,22 @@ A company receives thousands of customer reviews and support tickets every week.
 - **Inconsistent** : Response quality depends on who's writing that day.
 - **Risky** : The backlog of unaddressed critical feedback grows, and genuinely urgent complaints risk getting lost in the noise or answered too late to matter.
 
-Therefore, there is a need for a lightweight, explainable system that can automatically isolate the most urgent feedback, explain *why* it's urgent and accelerate the response process — without requiring a full ML/NLP pipeline.
+Therefore, there is a need for a lightweight, explainable system that can automatically isolate the most urgent feedback, explain *why* it's urgent and accelerate the response process, without requiring a full ML/NLP pipeline.
 
 ---
 
 ## 🎯 Objectives of the Study
 
 **Primary Objective:**
-To develop a Python-based, rule-first customer feedback triage system that identifies critical reviews, explains the drivers behind them, and generates AI-assisted response drafts.
+To develop a Python-based, rule-first customer feedback triage system that identifies critical reviews, explains the drivers behind them and generates AI-assisted response drafts.
 
 **Specific Objectives:**
 - To load and clean a raw customer review dataset (text reviews + star ratings).
-- To use simple, transparent rule-based logic — **no machine learning** to isolate "critical" (1–2 star) reviews.
+- To use simple, transparent rule-based logic **no machine learning** to isolate "critical" (1–2 star) reviews.
 - To identify the most common complaint keywords within critical reviews using frequency analysis.
 - To group complaint keywords into named, business-relevant categories (Service, Food Quality, Pricing, Delivery, Ambience, Hygiene).
 - To use a Generative AI API to automatically draft short, personalized, empathetic apology emails for the most critical, most detailed negative reviews.
-- To document the approach, limitations, and run instructions for reuse and extension.
+- To document the approach, limitations and run instructions for reuse and extension.
 
 ---
 
@@ -76,9 +76,9 @@ To develop a Python-based, rule-first customer feedback triage system that ident
 
 **In scope:**
 - Loading, cleaning, and preparing a single review dataset (text + rating) with pandas.
-- Rule-based filtering of critical reviews and keyword frequency analysis using basic Python (`collections.Counter`, string methods) — explicitly no ML/NLP models.
+- Rule-based filtering of critical reviews and keyword frequency analysis using basic Python (`collections.Counter`, string methods) explicitly no ML/NLP models.
 - Selecting a small sample (3) of critical, detailed reviews and generating apology emails via a Generative AI API (Grok, with OpenAI/Gemini as alternatives).
-- Documenting the approach, limitations, and run instructions.
+- Documenting the approach, limitations and run instructions.
 
 **Out of scope:**
 - Any machine learning or NLP modeling (e.g., sentiment classifiers, topic modeling) the brief explicitly calls for rule-based logic instead.
