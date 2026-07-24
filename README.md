@@ -177,10 +177,10 @@ Remove common stop words; count word frequency across critical reviews with `Cou
 | Ambience / Facilities | ambience, noisy, crowded, seating, parking |
 | Hygiene / Cleanliness | hygiene, dirty, unclean, insect, hair, smell |
 
-**Insight:** Service (service, bad, worst, staff) and food quality (taste, quality) dominate the top keywords. Words like "good" still surface due to negated phrases ("not good") — a known limitation of plain frequency analysis.
+**Insight:** Service (service, bad, worst, staff) and food quality (taste, quality) dominate the top keywords. Words like "good" still surface due to negated phrases ("not good"), a known limitation of plain frequency analysis.
 
 ### Phase 7: Post-EDA Visualization
-Generate a word cloud of complaint keywords, a bar chart of the top 20 complaint keywords, and a horizontal bar chart of critical-review percentage by complaint category.
+Generate a word cloud of complaint keywords, a bar chart of the top 20 complaint keywords and a horizontal bar chart of critical-review percentage by complaint category.
 
 **Insight:** Food Quality/Taste (33.2%) and Service/Staff (31.4%) together account for nearly two-thirds of all critical reviews; Pricing/Value (15.2%) and Order Accuracy/Delivery (10.5%) are secondary; Ambience (8.5%) and Hygiene (4.3%) are minor by comparison.
 
