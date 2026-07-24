@@ -119,13 +119,29 @@ This project shows that critical customer feedback can be triaged and responded 
 ## Project Structure
 
 ```
-.
-├── Customer_Feedback_Analysis.ipynb   # Main analysis notebook
-├── Restaurant reviews.csv             # Input dataset (not included — supply your own)
-├── Critical_Restaurant_Reviews.csv    # Output: filtered critical reviews
-├── Complaint_Category_Summary.csv     # Output: complaint category breakdown
-├── AI_Generated_Emails.txt            # Output: AI-drafted apology emails
-└── README.md                          # This file
+Restaurant-Customer-Feedback-Analysis/
+│
+├── Dataset/
+│   └── Restaurant reviews.csv
+│
+├── Notebook/
+│   └── Customer Feedback Analysis.ipynb
+│
+├── Deliverables/
+│   ├── Automated AI Generated Emails.txt
+│   ├── Complaint Category Summary.xlsx
+│   └── Critical Restaurant Reviews.xlsx
+│
+├── Visuals/
+│   ├── Customer Rating Distribution.png
+│   ├── Percentage of Critical Reviews.png
+│   ├── Top Complaints Keywords.png
+│   ├── Word Cloud.png
+│   └── Placeholder.txt
+│
+├── README.md
+├── LICENSE
+└── requirements.txt
 ```
 
 ---
